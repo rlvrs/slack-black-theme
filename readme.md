@@ -31,7 +31,8 @@ document.addEventListener("DOMContentLoaded", function() {
    let webviews = document.querySelectorAll(".TeamView webview");
 
    // Fetch our CSS in parallel ahead of time
-   const cssPath = 'https://cdn.rawgit.com/widget-/slack-black-theme/master/custom.css';
+   //const cssPath = 'https://cdn.rawgit.com/widget-/slack-black-theme/master/custom.css';
+   const cssPath = 'https://raw.githubusercontent.com/Nockiro/slack-black-theme/3ea2efdfb96ccc91549837ab237d57104181bbf8/custom.css';
    let cssPromise = fetch(cssPath).then(response => response.text());
 
    let customCustomCSS = `
@@ -41,6 +42,13 @@ document.addEventListener("DOMContentLoaded", function() {
       --text: #CCC;
       --background: #080808;
       --background-elevated: #222;
+   }
+
+   .c-search__input_box .c-search__input_box__input .ql-editor,
+   .c-search__input_box .c-search__input_box__input .ql-placeholder,
+   #message_pane_edit_input {
+      background: #222 !important;
+      border: none !important;
    }
    `
 
